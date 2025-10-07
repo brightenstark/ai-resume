@@ -1,13 +1,13 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import tsconfigPaths from 'vite-tsconfig-paths'
-// Note: We don't need the Tailwind plugin here because modern Tailwind CSS
-// is configured via PostCSS and is picked up by Vite automatically.
+import tailwindcss from "@tailwindcss/vite";
 
-// https://vitejs.dev/config/
+import { defineConfig } from "vite";
+
+import tsconfigPaths from "vite-tsconfig-paths";
+
+
+
 export default defineConfig({
-    plugins: [
-        react(),
-        tsconfigPaths()
-    ],
-})
+
+    plugins: [tailwindcss(), reactRouter(), tsconfigPaths()],
+
+});
